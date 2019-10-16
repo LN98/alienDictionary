@@ -52,19 +52,25 @@ public class alienController {
     @FXML
     void doTranslate(ActionEvent event) {
     	
-		if (!ad.getDizionario().containsKey(word.getText().split(" ")[0])) {
+		if (!ad.equals(word.getText().split(" ")[0])) {
 			if(ad.controlla(word.getText())!=null) {
 				if (display.getText().isEmpty()) {
 					display.setText(ad.controlla(word.getText()));
-				} else {
+				} 
+				else {
 					display.setText(display.getText() + "\n" + ad.controlla(word.getText()));
 				}
-			} else {
+			} 
+			else {
 				Alien parola = new Alien(word.getText());
 				ad.addParola(parola);
 			}
-		} else {
-			if (!display.getText().isEmpty()) {
+		} 
+		else {
+			if(word.getText().contains(" ")) {
+				ad.addParola(new Alien(word.getText()));
+			}
+			else if (!display.getText().isEmpty()) {
 				display.setText(display.getText() + "\n" + ad.traduzione(word.getText().split(" ")[0]));
 			} else {
 				display.setText(ad.traduzione(word.getText().split(" ")[0]));

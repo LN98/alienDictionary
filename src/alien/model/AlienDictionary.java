@@ -4,6 +4,11 @@ import java.util.HashMap;
 
 public class AlienDictionary {
 	
+	@Override
+	public String toString() {
+		return "AlienDictionary [dizionario=" + dizionario + "]";
+	}
+
 	private HashMap<String,String> dizionario;
 	
 	public AlienDictionary() {
@@ -29,6 +34,11 @@ public class AlienDictionary {
 
 	public HashMap<String, String> getDizionario() {
 		return dizionario;
+	}
+	
+	public boolean equals(String a) {
+		return dizionario.containsKey(a);
+		
 	}
 
 	

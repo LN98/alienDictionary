@@ -20,4 +20,10 @@ public class Alien {
 		return parolaA;
 	}
 
+	@Override
+	public String toString() {
+		return "Alien [traduzione=" + traduzione + ", parolaA=" + parolaA + "]";
+	}
+
+	
 }
