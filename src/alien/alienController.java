@@ -41,7 +41,7 @@ public class alienController {
     private TextArea display; // Value injected by FXMLLoader
 
     @FXML // fx:id="clean"
-    private Button clean; // Value injected by FXMLLoader
+    private Button clean; // Value injected by FXMLLoade
 
     @FXML
     void doReset(ActionEvent event) {

@@ -4,10 +4,6 @@ import java.util.HashMap;
 
 public class AlienDictionary {
 	
-	@Override
-	public String toString() {
-		return "AlienDictionary [dizionario=" + dizionario + "]";
-	}
 
 	private HashMap<String,String> dizionario;
 	
